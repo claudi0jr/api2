@@ -41,8 +41,9 @@ app.get("/usuario/sorteado", (req, res) => {
   res.json(usuarioSorteado);
 });
 
-app.listen(port, () => {
-  console.log(`API estralando em http://localhost:${port}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`API rodando na porta ${PORT}`);
 });
 
 // http://localhost:3000/usuario/todos
